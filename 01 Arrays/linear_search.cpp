@@ -30,6 +30,5 @@ int main(){
 		cout<<key <<" is NOT Found!" <<endl;
 	}
 
-
 	return 0;
 }
