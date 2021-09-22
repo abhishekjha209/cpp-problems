@@ -60,20 +60,17 @@ int largest_sumof_subarr3(int*arr, int n){
 
 		}
 	}
+
 	return largest_sum;
-
-
-
-
 }
 
 
 int main(){
     //Array Containing 
-	int arr[] = {10,20,30,40,50, 60};;
+	int arr[] = {10,20,30,40,50, 60};
 	int n = sizeof(arr)/sizeof(int);
 
-    int largest_sum = largest_sumof__subarr2(arr, n);
+    int largest_sum = largest_sumof_subarr3(arr, n);
     cout << "Largest sum: " << largest_sum << endl;
 
     return 0;
