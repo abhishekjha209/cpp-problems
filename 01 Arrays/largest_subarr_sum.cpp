@@ -15,7 +15,6 @@ int largest_subarr_sum1(int*arr, int n){
             for(int k=i; k<=j; k++){
                 curSum+=arr[k];
             }
-            // cout << sum << endl;
             largest_sum = max(largest_sum, curSum);
         }
     }
@@ -32,7 +31,6 @@ int largest_subarr_sum2(int*arr, int n){
         int curSum = 0;
         for(int j=i; j<n; j++){ // ending point of subarray.
             curSum += arr[j];
-            // cout << curSum << endl;
             largest_sum = max(largest_sum,curSum);
         }
     }
