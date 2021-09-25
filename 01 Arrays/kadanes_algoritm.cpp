@@ -1,20 +1,26 @@
 #include<iostream>
+#include<climits>
 using namespace std;
 
-int maximum_subarray_sum(int arr[],int n){
+int maximum_subarray_sum(int nums[],int n){
+		int largest_sum = INT_MIN;
+		int running_sum = 0;
 
-	int cs = 0;
-	int largest = 0;
+	for(int i=0; i<n; i++){
+		// update running sum on the go.
+		running_sum = running_sum + nums[i];
 
-	for(int i=0;i<n;i++){
-		cs = cs + arr[i];
-		if(cs < 0){
-			cs = 0;
-		}
-		largest = max(largest, cs);
+		// update largest_sum sum, if running_sum is larger.
+		largest_sum = max(largest_sum, running_sum); 
+
+		/*  if running sum is less than 0 then, make it zero, 
+			and don't include it in further solution. */
+		if(running_sum < 0){
+			running_sum = 0;
+		} 
 	}
 
-	return largest;
+	return largest_sum; 
 }
 
 
