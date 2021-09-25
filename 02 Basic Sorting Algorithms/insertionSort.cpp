@@ -5,13 +5,12 @@ void insertionSort(int arr[], int n){
     
     for(int i=1; i<n; i++){
         int key = arr[i];
-        int j = i;
-        while (j>0 && arr[j-1]>key) {
-            arr[j] = arr[j-1];
-            j--;
+        int prev = i-1;
+        while (prev>=0 && arr[prev]>key) {
+            arr[prev+1] = arr[prev];
+            prev--;
         }
-        arr[j] = key;
-        
+        arr[prev+1] = key;
     }
 }
 
