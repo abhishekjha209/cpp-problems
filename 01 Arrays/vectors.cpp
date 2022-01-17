@@ -24,6 +24,7 @@ int main(){
     
 
     /* insert functions in vector. */
+    vector v(5,3); // initializing a vector of size 5, with 3 in it.
     arr.insert(arr.begin(), 56); // inserts specifed number at given iterator(here, v.begin())
     arr.insert(arr.begin(), 4, 100); // inserts 4 times 100 at specified iterator
     arr.insert(arr.begin(), v.begin()+2, v.begin()+ 4);  // picks vector range and fix it at specified iterator.
